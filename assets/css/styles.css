@@ -1105,3 +1105,202 @@ select {
     opacity: 0.45;
   }
 }
+/* =========================================================
+   AJUSTE DE JERARQUÍA VISUAL SERVIMAK
+   Títulos más armónicos con la barra de navegación
+   Paleta: blanco, azul y naranjo
+   ========================================================= */
+
+:root {
+  --white: #ffffff;
+  --blue-main: #104c98;
+  --blue-dark: #06275a;
+  --orange-main: #f05a28;
+}
+
+/* Barra de navegación más presente */
+.nav {
+  height: 78px;
+}
+
+.brand img {
+  height: 56px;
+}
+
+.nav-menu a {
+  font-size: 0.98rem;
+  font-weight: 850;
+  letter-spacing: 0.01em;
+}
+
+.nav-cta {
+  font-size: 0.95rem;
+  font-weight: 900;
+  background: var(--blue-main) !important;
+}
+
+/* Hero más elegante y menos desproporcionado */
+.hero {
+  padding: 68px 0 56px;
+  gap: 50px;
+}
+
+.hero h1 {
+  font-size: clamp(2.35rem, 4.35vw, 4.15rem) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.045em !important;
+  color: var(--blue-dark) !important;
+  max-width: 760px;
+}
+
+.lead {
+  font-size: clamp(1rem, 1.25vw, 1.12rem) !important;
+  line-height: 1.62;
+  color: var(--blue-dark) !important;
+  max-width: 620px;
+}
+
+.eyebrow {
+  font-size: 0.74rem !important;
+  color: var(--orange-main) !important;
+}
+
+/* Títulos de secciones más proporcionados */
+.split h2,
+.section-head h2,
+.team h2,
+.contact h2,
+.cta-content h2 {
+  font-size: clamp(1.85rem, 2.65vw, 2.85rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.035em !important;
+  color: var(--blue-dark) !important;
+}
+
+/* Subtítulos y textos introductorios */
+.section-head p:last-child,
+.text-block,
+.contact-copy p {
+  font-size: 1rem !important;
+  line-height: 1.65;
+  color: var(--blue-dark) !important;
+}
+
+/* Tarjetas: títulos menos pesados */
+.service-card h3,
+.client-grid h3,
+.steps h3,
+.team-grid h3 {
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem) !important;
+  line-height: 1.25 !important;
+  color: var(--blue-dark) !important;
+}
+
+.service-card p,
+.client-grid p,
+.steps p,
+.team-grid p {
+  font-size: 0.96rem !important;
+  line-height: 1.58;
+  color: var(--blue-dark) !important;
+}
+
+/* Métricas del hero más contenidas */
+.hero-metrics dt {
+  font-size: clamp(1.2rem, 1.65vw, 1.45rem) !important;
+  color: var(--orange-main) !important;
+}
+
+.hero-metrics dd {
+  font-size: 0.86rem !important;
+  color: var(--blue-main) !important;
+}
+
+/* CTA: que no compita con el hero */
+.cta-content h2 {
+  font-size: clamp(1.85rem, 2.7vw, 2.75rem) !important;
+  color: var(--white) !important;
+}
+
+.cta-content p {
+  font-size: 1rem !important;
+  color: var(--white) !important;
+}
+
+/* Footer institucional: bajar tamaño del título */
+.servimak-footer-info h2 {
+  font-size: clamp(2rem, 3.35vw, 3.35rem) !important;
+  line-height: 1 !important;
+}
+
+.servimak-footer-subtitle {
+  font-size: clamp(1.05rem, 1.55vw, 1.45rem) !important;
+}
+
+.servimak-footer-contact {
+  font-size: clamp(0.92rem, 1.15vw, 1.05rem) !important;
+}
+
+/* Ajuste responsive tablet */
+@media (max-width: 900px) {
+  .nav {
+    height: auto;
+  }
+
+  .brand img {
+    height: 50px;
+  }
+
+  .hero {
+    padding: 46px 0 44px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.15rem, 7vw, 3.25rem) !important;
+    line-height: 1.06 !important;
+  }
+
+  .split h2,
+  .section-head h2,
+  .team h2,
+  .contact h2,
+  .cta-content h2 {
+    font-size: clamp(1.8rem, 5.5vw, 2.55rem) !important;
+  }
+}
+
+/* Ajuste celular */
+@media (max-width: 560px) {
+  .brand img {
+    height: 46px;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem !important;
+    line-height: 1.08 !important;
+  }
+
+  .lead {
+    font-size: 0.98rem !important;
+  }
+
+  .split h2,
+  .section-head h2,
+  .team h2,
+  .contact h2,
+  .cta-content h2 {
+    font-size: 1.95rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .service-card h3,
+  .client-grid h3,
+  .steps h3,
+  .team-grid h3 {
+    font-size: 1.08rem !important;
+  }
+
+  .servimak-footer-info h2 {
+    font-size: 2.1rem !important;
+  }
+}
