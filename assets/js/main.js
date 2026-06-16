@@ -16,7 +16,7 @@ if (form) {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const data = new FormData(form);
-    const to = form.dataset.email || 'contacto@servimakspa.cl';
+    const to = form.dataset.email || 'gerencia.operaciones@servimakspa.cl';
     const subject = encodeURIComponent('Solicitud de cotización desde servimakspa.cl');
     const body = encodeURIComponent(
 `Nombre / empresa: ${data.get('nombre') || ''}
