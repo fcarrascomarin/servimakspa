@@ -1305,3 +1305,85 @@ select {
     font-size: 2.1rem !important;
   }
 }
+
+/* Ajuste final de armonía visual SERVIMAK */
+
+.hero h1 {
+  font-size: clamp(2.25rem, 4vw, 3.85rem) !important;
+  line-height: 1.05 !important;
+  max-width: 740px;
+}
+
+.split h2,
+.section-head h2,
+.team h2,
+.contact h2,
+.cta-content h2 {
+  font-size: clamp(1.75rem, 2.45vw, 2.65rem) !important;
+  line-height: 1.1 !important;
+}
+
+.lead {
+  font-size: clamp(1rem, 1.18vw, 1.08rem) !important;
+  max-width: 620px;
+}
+
+.hero {
+  padding-top: 58px !important;
+  padding-bottom: 54px !important;
+}
+
+.hero-visual {
+  min-height: 460px !important;
+}
+
+.service-card h3,
+.client-grid h3,
+.steps h3,
+.team-grid h3 {
+  font-size: clamp(1.02rem, 1.18vw, 1.15rem) !important;
+}
+
+.service-card p,
+.client-grid p,
+.steps p,
+.team-grid p {
+  font-size: 0.94rem !important;
+}
+
+.section-head {
+  margin-bottom: 28px !important;
+}
+
+.services,
+.process,
+.clients,
+.team,
+.contact {
+  padding-top: 62px !important;
+  padding-bottom: 62px !important;
+}
+
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: clamp(2.05rem, 7vw, 3rem) !important;
+  }
+
+  .hero-visual {
+    min-height: 360px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: 2.15rem !important;
+  }
+
+  .split h2,
+  .section-head h2,
+  .team h2,
+  .contact h2,
+  .cta-content h2 {
+    font-size: 1.85rem !important;
+  }
+}
