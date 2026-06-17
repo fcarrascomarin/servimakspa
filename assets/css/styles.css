@@ -1107,158 +1107,229 @@ select {
   }
 }
 /* =========================================================
-   AJUSTE DE JERARQUÍA VISUAL SERVIMAK
-   Títulos más armónicos con la barra de navegación
-   Paleta: blanco, azul y naranjo
+   AJUSTE FINAL SERVIMAK
+   Jerarquía visual, navegación móvil y formulario centrado
    ========================================================= */
 
-:root {
-  --white: #ffffff;
-  --blue-main: #104c98;
-  --blue-dark: #06275a;
-  --orange-main: #f05a28;
+/* Corrección menor: align-items no corresponde en contenedor normal */
+.section-wrap {
+  align-items: initial;
 }
 
-/* Barra de navegación más presente */
+/* Navegación más armónica */
 .nav {
   height: 78px;
+  position: relative;
 }
 
 .brand img {
-  height: 56px;
+  height: 54px;
 }
 
 .nav-menu a {
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   font-weight: 850;
   letter-spacing: 0.01em;
 }
 
 .nav-cta {
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   font-weight: 900;
-  background: var(--blue-main) !important;
 }
 
-/* Hero más elegante y menos desproporcionado */
+/* Hero más proporcionado */
 .hero {
-  padding: 68px 0 56px;
+  padding-top: 58px;
+  padding-bottom: 54px;
   gap: 50px;
 }
 
 .hero h1 {
-  font-size: clamp(2.35rem, 4.35vw, 4.15rem) !important;
-  line-height: 1.04 !important;
-  letter-spacing: -0.045em !important;
-  color: var(--blue-dark) !important;
-  max-width: 760px;
+  font-size: clamp(2.25rem, 4vw, 3.85rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  max-width: 740px;
 }
 
 .lead {
-  font-size: clamp(1rem, 1.25vw, 1.12rem) !important;
+  font-size: clamp(1rem, 1.18vw, 1.08rem);
   line-height: 1.62;
-  color: var(--blue-dark) !important;
   max-width: 620px;
 }
 
-.eyebrow {
-  font-size: 0.74rem !important;
-  color: var(--orange-main) !important;
+.hero-visual {
+  min-height: 460px;
 }
 
-/* Títulos de secciones más proporcionados */
+.eyebrow {
+  font-size: 0.74rem;
+}
+
+/* Importante: evita que los eyebrow blancos del CTA se vuelvan naranjos */
+.eyebrow.light {
+  color: var(--white) !important;
+}
+
+/* Títulos de secciones más sobrios */
 .split h2,
 .section-head h2,
 .team h2,
 .contact h2,
 .cta-content h2 {
-  font-size: clamp(1.85rem, 2.65vw, 2.85rem) !important;
-  line-height: 1.08 !important;
-  letter-spacing: -0.035em !important;
-  color: var(--blue-dark) !important;
+  font-size: clamp(1.75rem, 2.45vw, 2.65rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
 }
 
-/* Subtítulos y textos introductorios */
+/* Textos introductorios */
 .section-head p:last-child,
 .text-block,
 .contact-copy p {
-  font-size: 1rem !important;
+  font-size: 1rem;
   line-height: 1.65;
-  color: var(--blue-dark) !important;
 }
 
-/* Tarjetas: títulos menos pesados */
+/* Tarjetas */
 .service-card h3,
 .client-grid h3,
 .steps h3,
 .team-grid h3 {
-  font-size: clamp(1.05rem, 1.25vw, 1.22rem) !important;
-  line-height: 1.25 !important;
-  color: var(--blue-dark) !important;
+  font-size: clamp(1.02rem, 1.18vw, 1.15rem);
+  line-height: 1.25;
 }
 
 .service-card p,
 .client-grid p,
 .steps p,
 .team-grid p {
-  font-size: 0.96rem !important;
+  font-size: 0.94rem;
   line-height: 1.58;
-  color: var(--blue-dark) !important;
 }
 
-/* Métricas del hero más contenidas */
+/* Métricas del hero */
 .hero-metrics dt {
-  font-size: clamp(1.2rem, 1.65vw, 1.45rem) !important;
-  color: var(--orange-main) !important;
+  font-size: clamp(1.2rem, 1.65vw, 1.45rem);
 }
 
 .hero-metrics dd {
-  font-size: 0.86rem !important;
-  color: var(--blue-main) !important;
+  font-size: 0.86rem;
 }
 
-/* CTA: que no compita con el hero */
+/* Espaciado general más compacto */
+.services,
+.process,
+.clients,
+.team,
+.contact {
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+
+.section-head {
+  margin-bottom: 28px;
+}
+
+/* CTA menos invasivo */
 .cta-content h2 {
-  font-size: clamp(1.85rem, 2.7vw, 2.75rem) !important;
-  color: var(--white) !important;
+  font-size: clamp(1.85rem, 2.7vw, 2.75rem);
 }
 
 .cta-content p {
-  font-size: 1rem !important;
-  color: var(--white) !important;
+  font-size: 1rem;
 }
 
-/* Footer institucional: bajar tamaño del título */
+/* Footer institucional más equilibrado */
 .servimak-footer-info h2 {
-  font-size: clamp(2rem, 3.35vw, 3.35rem) !important;
-  line-height: 1 !important;
+  font-size: clamp(2rem, 3.35vw, 3.35rem);
+  line-height: 1;
 }
 
 .servimak-footer-subtitle {
-  font-size: clamp(1.05rem, 1.55vw, 1.45rem) !important;
+  font-size: clamp(1.05rem, 1.55vw, 1.45rem);
 }
 
 .servimak-footer-contact {
-  font-size: clamp(0.92rem, 1.15vw, 1.05rem) !important;
+  font-size: clamp(0.92rem, 1.15vw, 1.05rem);
 }
 
-/* Ajuste responsive tablet */
+/* Formulario centrado */
+.contact {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 34px;
+  width: min(860px, calc(100% - 40px));
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-copy {
+  max-width: 720px;
+  text-align: center;
+}
+
+.contact-copy h2 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+
+.contact-copy p {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.email-list {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form {
+  width: min(100%, 720px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form .full,
+.contact-form button {
+  justify-self: center;
+}
+
+.contact-form button.full {
+  width: min(100%, 360px);
+}
+
+/* Tablet */
 @media (max-width: 900px) {
   .nav {
     height: auto;
+    padding: 14px 0;
   }
 
   .brand img {
     height: 50px;
   }
 
+  .nav-menu {
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+  }
+
   .hero {
-    padding: 46px 0 44px;
+    padding-top: 46px;
+    padding-bottom: 44px;
   }
 
   .hero h1 {
-    font-size: clamp(2.15rem, 7vw, 3.25rem) !important;
-    line-height: 1.06 !important;
+    font-size: clamp(2.05rem, 7vw, 3rem);
+    line-height: 1.06;
+  }
+
+  .hero-visual {
+    min-height: 360px;
   }
 
   .split h2,
@@ -1266,23 +1337,27 @@ select {
   .team h2,
   .contact h2,
   .cta-content h2 {
-    font-size: clamp(1.8rem, 5.5vw, 2.55rem) !important;
+    font-size: clamp(1.8rem, 5.5vw, 2.55rem);
+  }
+
+  .contact {
+    width: min(100% - 40px, 860px);
   }
 }
 
-/* Ajuste celular */
+/* Celular */
 @media (max-width: 560px) {
   .brand img {
     height: 46px;
   }
 
   .hero h1 {
-    font-size: 2.25rem !important;
-    line-height: 1.08 !important;
+    font-size: 2.15rem;
+    line-height: 1.08;
   }
 
   .lead {
-    font-size: 0.98rem !important;
+    font-size: 0.98rem;
   }
 
   .split h2,
@@ -1290,180 +1365,43 @@ select {
   .team h2,
   .contact h2,
   .cta-content h2 {
-    font-size: 1.95rem !important;
-    line-height: 1.1 !important;
+    font-size: 1.85rem;
+    line-height: 1.1;
   }
 
   .service-card h3,
   .client-grid h3,
   .steps h3,
   .team-grid h3 {
-    font-size: 1.08rem !important;
+    font-size: 1.08rem;
   }
 
-  .servimak-footer-info h2 {
-    font-size: 2.1rem !important;
-  }
-}
-
-/* Ajuste final de armonía visual SERVIMAK */
-
-.hero h1 {
-  font-size: clamp(2.25rem, 4vw, 3.85rem) !important;
-  line-height: 1.05 !important;
-  max-width: 740px;
-}
-
-.split h2,
-.section-head h2,
-.team h2,
-.contact h2,
-.cta-content h2 {
-  font-size: clamp(1.75rem, 2.45vw, 2.65rem) !important;
-  line-height: 1.1 !important;
-}
-
-.lead {
-  font-size: clamp(1rem, 1.18vw, 1.08rem) !important;
-  max-width: 620px;
-}
-
-.hero {
-  padding-top: 58px !important;
-  padding-bottom: 54px !important;
-}
-
-.hero-visual {
-  min-height: 460px !important;
-}
-
-.service-card h3,
-.client-grid h3,
-.steps h3,
-.team-grid h3 {
-  font-size: clamp(1.02rem, 1.18vw, 1.15rem) !important;
-}
-
-.service-card p,
-.client-grid p,
-.steps p,
-.team-grid p {
-  font-size: 0.94rem !important;
-}
-
-.section-head {
-  margin-bottom: 28px !important;
-}
-
-.services,
-.process,
-.clients,
-.team,
-.contact {
-  padding-top: 62px !important;
-  padding-bottom: 62px !important;
-}
-
-@media (max-width: 900px) {
-  .hero h1 {
-    font-size: clamp(2.05rem, 7vw, 3rem) !important;
-  }
-
-  .hero-visual {
-    min-height: 360px !important;
-  }
-}
-
-@media (max-width: 560px) {
-  .hero h1 {
-    font-size: 2.15rem !important;
-  }
-
-  .split h2,
-  .section-head h2,
-  .team h2,
-  .contact h2,
-  .cta-content h2 {
-    font-size: 1.85rem !important;
-  }
-}
-/* =========================================================
-   CENTRADO DEL FORMULARIO DE CONTACTO SERVIMAK
-   ========================================================= */
-
-.contact {
-  grid-template-columns: 1fr !important;
-  justify-items: center !important;
-  gap: 34px !important;
-  max-width: 860px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-top: 68px !important;
-  padding-bottom: 72px !important;
-}
-
-.contact-copy {
-  max-width: 720px !important;
-  text-align: center !important;
-}
-
-.contact-copy h2 {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  max-width: 720px !important;
-}
-
-.contact-copy p {
-  max-width: 660px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.email-list {
-  max-width: 620px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.contact-form {
-  width: min(100%, 720px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.contact-form .full,
-.contact-form button {
-  justify-self: center !important;
-}
-
-.contact-form button.full {
-  width: min(100%, 360px) !important;
-}
-
-/* En celular, el botón vuelve a ocupar todo el ancho */
-@media (max-width: 560px) {
   .contact {
-    max-width: 100% !important;
-    padding-top: 54px !important;
-    padding-bottom: 58px !important;
+    width: min(100% - 28px, 860px);
+    padding-top: 54px;
+    padding-bottom: 58px;
   }
 
   .contact-copy {
-    text-align: left !important;
+    text-align: left;
   }
 
   .contact-copy h2,
   .contact-copy p,
   .email-list {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .contact-form {
-    width: 100% !important;
+    width: 100%;
   }
 
   .contact-form button.full {
-    width: 100% !important;
+    width: 100%;
+  }
+
+  .servimak-footer-info h2 {
+    font-size: 2.1rem;
   }
 }
