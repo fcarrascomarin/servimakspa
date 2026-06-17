@@ -11,22 +11,4 @@ if (toggle && menu) {
   }));
 }
 
-const form = document.querySelector('#contactForm');
-if (form) {
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const to = form.dataset.email || 'gerencia.operaciones@servimakspa.cl';
-    const subject = encodeURIComponent('Solicitud de cotización desde servimakspa.cl');
-    const body = encodeURIComponent(
-`Nombre / empresa: ${data.get('nombre') || ''}
-Correo: ${data.get('correo') || ''}
-Teléfono: ${data.get('telefono') || ''}
-Servicio requerido: ${data.get('servicio') || ''}
 
-Mensaje:
-${data.get('mensaje') || ''}`
-    );
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-  });
-}

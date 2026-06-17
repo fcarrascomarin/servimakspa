@@ -224,31 +224,57 @@
 
     <section class="section-wrap contact">      
                 
-      <form class="contact-form" id="contactForm" data-email="contacto@servimakspa.cl">
-        <label>Nombre o empresa
-          <input type="text" name="nombre" autocomplete="name" required />
-        </label>
-        <label>Correo
-          <input type="email" name="correo" autocomplete="email" required />
-        </label>
-        <label>Teléfono
-          <input type="tel" name="telefono" autocomplete="tel" />
-        </label>
-        <label>Servicio requerido
-          <select name="servicio" required>
-            <option value="">Selecciona una opción</option>
-            <option>Movimiento de tierra y maquinaria</option>
-            <option>Ingeniería y construcción</option>
-            <option>Geotecnia / topografía / geomensura</option>
-            <option>Asesoría técnica o eléctrica</option>
-            <option>Otro requerimiento</option>
-          </select>
-        </label>
-        <label>Mensaje
-          <textarea name="mensaje" rows="5" required></textarea>
-        </label>
-        <button class="btn primary full" type="submit">Enviar solicitud</button>
-        </form>
+      <form 
+  class="contact-form" 
+  id="contactForm"
+  action="https://formsubmit.co/gerencia.operaciones@servimakspa.cl"
+  method="POST"
+>
+  <input type="hidden" name="_subject" value="Nueva solicitud desde servimakspa.cl">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="true">
+  <input type="text" name="_honey" style="display:none">
+
+  <label>
+    Nombre / empresa
+    <input type="text" name="Nombre o empresa" autocomplete="name" required>
+  </label>
+
+  <label>
+    Correo electrónico
+    <input type="email" name="email" autocomplete="email" required>
+  </label>
+
+  <label>
+    Teléfono
+    <input type="tel" name="Teléfono" autocomplete="tel" required>
+  </label>
+
+  <label>
+    Servicio requerido
+    <select name="Servicio requerido" required>
+      <option value="">Selecciona una opción</option>
+      <option value="Movimiento de tierra">Movimiento de tierra</option>
+      <option value="Obras civiles">Obras civiles</option>
+      <option value="Estructuras metálicas">Estructuras metálicas</option>
+      <option value="Geotecnia y topografía">Geotecnia y topografía</option>
+      <option value="Asesoría eléctrica">Asesoría eléctrica</option>
+      <option value="Arriendo de maquinaria">Arriendo de maquinaria</option>
+      <option value="Otro requerimiento">Otro requerimiento</option>
+    </select>
+  </label>
+
+  <label>
+    Mensaje
+    <textarea name="Mensaje" rows="5" required></textarea>
+  </label>
+
+  <button class="btn primary full" type="submit">Enviar solicitud</button>
+
+  <p class="form-note">
+    La solicitud será enviada automáticamente a gerencia.operaciones@servimakspa.cl.
+  </p>
+</form>
        
     </section>
   </main>
